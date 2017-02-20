@@ -18,7 +18,7 @@
     "@context": "http://schema.org/",
     "claim": {
       "id": "did:btc1:2839347234234",
-      "over21": true
+      "ageOver": 21
     },
     "privacyPolicy": "DoNotCorrelate"
   };
