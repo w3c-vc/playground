@@ -15,7 +15,7 @@
 
   // add the example of a Place
   playground.examples["Over 21"] = {
-    "@context": "http://schema.org/",
+    "@context": "https://schema.org/",
     "claim": {
       "id": "did:btc1:2839347234234",
       "ageOver": 21
@@ -25,7 +25,7 @@
 
   // add the Web of Trust example
   playground.examples["WoT"] = {
-    "@context": "http://schema.org/",
+    "@context": "https://schema.org/",
     "claim": {
       "id": "did:btc1:298347982739",
       "name": "Alice",
@@ -38,7 +38,7 @@
 
   // add the example of a Person
   playground.examples["Person"] = {
-    "@context": "http://schema.org/",
+    "@context": "https://schema.org/",
     "claim": {
       "id": "did:btc1:298347982739",
       "name": "Jane Doe",
