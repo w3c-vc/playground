@@ -39,8 +39,8 @@
   // the last parsed version of same
   playground.lastParsed = docs();
 
-  // set the active tab to the expanded view
-  playground.activeTab = 'tab-expanded';
+  // set the active tab to the normalized view
+  playground.activeTab = 'tab-normalized';
 
   // map of original to modifed contexts
   playground.contextMap = {
