@@ -1,10 +1,10 @@
 @font-face {
 	font-family: 'rdf-font';
-	src:url('../../font/rdf-font/rdf-font.eot?-jiqq35');
-	src:url('../../font/rdf-font/rdf-font.eot?#iefix-jiqq35') format('embedded-opentype'),
-		url('../../font/rdf-font/rdf-font.woff?-jiqq35') format('woff'),
-		url('../../font/rdf-font/rdf-font.ttf?-jiqq35') format('truetype'),
-		url('../../font/rdf-font/rdf-font.svg?-jiqq35#rdf-font') format('svg');
+	src:url('/fonts/rdf-font.eot?-jiqq35');
+	src:url('/fonts/rdf-font.eot?#iefix-jiqq35') format('embedded-opentype'),
+		url('/fonts/rdf-font.woff?-jiqq35') format('woff'),
+		url('/fonts/rdf-font.ttf?-jiqq35') format('truetype'),
+		url('/fonts/rdf-font.svg?-jiqq35#rdf-font') format('svg');
 	font-weight: normal;
 	font-style: normal;
 }

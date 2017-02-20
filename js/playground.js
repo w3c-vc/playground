@@ -244,6 +244,17 @@
    * Used to initialize the UI, call once on document load.
    */
   playground.init = function() {
+    // hide everything
+    $('#context-div').hide();
+    $('#frame-div').hide();
+    $('#privatekey-rsa-div').hide();
+    $('#privatekey-koblitz-div').hide();
+    $('#markup,#context,#frame').bind('keyup', function() {
+      $('.btn-group > .btn').each(function () {
+        $(this).removeClass('active');
+      });
+    });
+
     // enable bootstrap tabs
     $('#tabs a').click(function (e) {
       e.preventDefault();
@@ -310,7 +321,7 @@
 
     // load the schema
     $.ajax({
-        url: "../schemas/jsonld-schema.json",
+        url: "/js/jsonld-schema.json",
         dataType: "json"
       })
       .done(function(schema){

@@ -10,45 +10,8 @@ layout: landing
 		<a href="#dashboard" class="more scrolly">Use the Playground</a>
 	</section>
 
-<!-- TEMPORARY -->
-<!-- CodeMirror -->
-<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/g/bootstrap@2.3.1(css/bootstrap-responsive.min.css),codemirror@3.22.0(codemirror.css+addon/lint/lint.css+addon/hint/show-hint.css+theme/neat.css)">
-<link rel="stylesheet" type="text/css" href="/css/playground.css">
-<link rel="stylesheet" type="text/css" href="/css/jsonld-vis.css">
-<link rel="stylesheet" type="text/css" href="/css/rdf-font.css">
-
-<!-- sccdn scripts -->
-<script src="//cdn.jsdelivr.net/g/async@1.5.0,jquery@1.11.0,es6-promise@1.0.0,bootstrap@2.3.2,codemirror@3.22.0(codemirror.min.js+addon/lint/lint.js+addon/edit/matchbrackets.js+addon/edit/closebrackets.js+addon/display/placeholder.js+addon/hint/show-hint.js+mode/ntriples/ntriples.js+mode/javascript/javascript.js)"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/jsonld/0.4.2/jsonld.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/d3-tip/0.6.7/d3-tip.min.js"></script>
-
-<!-- local scripts -->
-<script src="/js/forge.min.js"></script>
-<script src="/js/bitcore-message.js"></script>
-<script src="/js/jsonld-signatures.js"></script>
-<script src="/js/jsonlint.js"></script>
-<script src="/js/tv4.min.js"></script>
-<script src="/js/json-schema-lint.js"></script>
-<script src="/js/jsonld-hint.js"></script>
-<script src="/js/playground.js"></script>
-<script src="/js/playground-examples.js"></script>
-<script src="/js/jsonld-vis.js"></script>
-
-<script type="text/javascript">
-  $('#context-div').hide();
-  $('#frame-div').hide();
-  $('#privatekey-rsa-div').hide();
-  $('#privatekey-koblitz-div').hide();
-  $('#markup,#context,#frame').bind('keyup', function() {
-    $('.btn-group > .btn').each(function () {
-      $(this).removeClass('active');
-    });
-  });
-</script>
-
 <!-- Playground -->
-	<section id="dashboard" class="wrapper style3 special" onload="playground.init();">
+	<section id="dashboard" class="wrapper style3">
 		<div class="inner">
 
       <div class="loading hero">
@@ -60,35 +23,20 @@ layout: landing
             <button class="btn disabled btn-primary">Examples:</button>
             <button id="btn-person" class="btn button">
               <i class="icon icon-user"></i>
+              <span>Over 21</span>
+            </button>
+            <button id="btn-person" class="btn button">
+              <i class="icon icon-user"></i>
+              <span>WoT</span>
+            </button>
+            <button id="btn-person" class="btn button">
+              <i class="icon icon-user"></i>
               <span>Person</span>
-            </button>
-            <button id="btn-event" class="btn button">
-              <i class="icon icon-calendar"></i>
-              <span>Event</span>
-            </button>
-            <button id="btn-place" class="btn button">
-              <i class="icon icon-map-marker"></i>
-              <span>Place</span>
-            </button>
-            <button id="btn-product" class="btn button">
-              <i class="icon icon-barcode"></i>
-              <span>Product</span>
-            </button>
-            <button id="btn-recipe" class="btn button">
-              <i class="icon icon-food"></i>
-              <span>Recipe</span>
-            </button>
-            <button id="btn-library" class="btn button">
-              <i class="icon icon-book"></i>
-              <span>Library</span>
-            </button>
-            <button id="btn-activity" class="btn button">
-              <i class="icon icon-comment"></i>
-              <span>Activity</span>
             </button>
           </div>
 
-          <div class="pull-right">
+          <!-- FIXME: Re-enable once the CSS if fixed -->
+          <!-- div class="pull-right">
             <a class="btn hide" id="permalink">
               <i class="icon icon-link"></i>
               <span>Permalink</span>
@@ -120,7 +68,7 @@ layout: landing
                 </tbody>
               </table>
             </div>
-          </div>
+          </div -->
 
           <div class="container" id="markup-container">
             <div class="row">
