@@ -1,25 +1,47 @@
-<!-- Footer -->
-<footer id="footer">
-  <ul class="icons">
-    {% for socloc in site.social %}
-    {% if socloc[1] %}
-    {% if socloc[0] == 'email' %}
-    <li><a target="_blank" href="{{ socloc[1] }}" class="icon fa-envelope-o"
-           ><span class="label">E-mail</span></a></li>
-    {% else %}
-    <li><a target="_blank" href="{{ socloc[1] }}" class="icon fa-{{ socloc[0] }}"
-           ><span class="label">{{ socloc[0] }}</span></a></li>
-    {% endif %}
-    {% endif %}
-    {% endfor %}
-  </ul>
-  <ul class="copyright">
-    <li>&copy; {% assign thisyear = site.time | date: "%Y" %}
-    {% if site.first_published %}
-      {% capture diff %}{{ site.first_published | minus:thisyear }}{% endcapture %}
-      {% if diff contains '-' %}{{ site.first_published }},{% endif %}
-    {% endif %}
-    {{ thisyear }}
-    {% if site.owner %}{{ site.owner }}{% else %}{{ site.title }}{% endif %}</li>
-  </ul>
-</footer>
+    <!-- Footer -->
+    <footer class="text-center">
+        <div class="footer-above">
+            <div class="container">
+                <div class="row">
+                    <div class="footer-col col-md-4">
+                        <h3>{{ site.footer.location }}</h3>
+                        <p>
+                            {% for adress in site.address %}
+                                {{ adress.line }} <br>
+		                    {% endfor %}
+                        </p>
+                    </div>
+                    <div class="footer-col col-md-4">
+                        <h3>{{ site.footer.social }}</h3>
+                        <ul class="list-inline">
+                            {% for network in site.social %}
+                            <li>
+                                <a href="{{ network.url }}" class="btn-social btn-outline"><i class="fa fa-fw fa-{{ network.title }}"></i></a>
+                            </li>
+		                    {% endfor %}
+                        </ul>
+                    </div>
+                    <div class="footer-col col-md-4">
+                        <h3>{{ site.footer.credits }}</h3>
+                        <p>{{ site.credits }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-below">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        Copyright &copy; {{ site.footer.copyright }} 20{{ site.time | date: '%y' }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
+    <div class="scroll-top page-scroll visible-xs visible-sm">
+        <a class="btn btn-primary" href="#page-top">
+            <i class="fa fa-chevron-up"></i>
+        </a>
+    </div>

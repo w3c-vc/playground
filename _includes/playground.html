@@ -1,0 +1,238 @@
+  <!-- Editor Section -->
+    <section class="" id="editor">
+        <div class="container">
+            <div class="row">
+               <div class="col-lg-12">
+
+          <div class="btn-group" data-toggle="buttons-radio">
+            <button class="btn disabled btn-primary">Examples:</button>
+            <button id="btn-person" class="btn button">
+              <i class="icon icon-user"></i>
+              <span>Over 21</span>
+            </button>
+            <button id="btn-person" class="btn button">
+              <i class="icon icon-user"></i>
+              <span>WoT</span>
+            </button>
+            <button id="btn-person" class="btn button">
+              <i class="icon icon-user"></i>
+              <span>Person</span>
+            </button>
+          </div>
+
+          <div class="pull-right">
+            <a class="btn hide" id="permalink">
+              <i class="icon icon-link"></i>
+              <span>Permalink</span>
+            </a>
+            <a class="btn" id="gist">
+              <i class="icon icon-github"></i>
+              <span>Gist</span>
+            </a>
+            <button class="btn popover-info" title="Keyboard shortcuts">
+              <i class="icon icon-keyboard"></i> Shortcuts
+            </button>
+            <div class="popover-info-content hide">
+              <table class="table table-striped">
+                <thead>
+                  <tr>
+                    <th>Key</th>
+                    <th>Autocomplete</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><label class="label">@</label></td>
+                    <td>all of the <b>@</b> keywords</td>
+                  </tr>
+                  <tr>
+                    <td><label class="label">Ctrl+Space</label></td>
+                    <td>available keys in <b>@context</b></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="container" id="markup-container">
+            <div class="row">
+              <div id="markup-div" class="col-md-12">
+                <div class="pull-right editor-options">
+                  <div class="input-prepend editor-option" title="Use remote document" data-editor="markup">
+                    <button class="btn" type="button" data-toggle="button">
+                      <span class="icon-stack">
+                        <i class="icon-cloud icon-stack-base icon-muted"></i>
+                        <i class="icon-file"></i>
+                      </span>
+                    </button>
+                    <input class="col-md-2" type="text" placeholder="Document URL"/>
+                  </div>
+                </div>
+                <p>JSON-LD Input</p>
+                <textarea id="markup" class="compressed process col-md-6 codemirror-input"
+                placeholder="Enter your JSON-LD markup here..." rows="10"></textarea>
+              </div>
+
+              <div id="context-div" class="col-md-6">
+                <div class="pull-right editor-options">
+                  <div class="input-prepend editor-option" title="Use remote context" data-editor="context">
+                    <button class="btn" type="button" data-toggle="button">
+                      <span class="icon-stack">
+                        <i class="icon-cloud icon-stack-base icon-muted"></i>
+                        <i class="icon-bullseye"></i>
+                      </span>
+                    </button>
+                    <input class="col-md-2" type="text" placeholder="Context URL"/>
+                  </div>
+                </div>
+                <p>New JSON-LD Context</p>
+                <button class="btn" data-toggle="button" id="copy-context" title='Copy context from "JSON-LD Input"'>
+                  <i class="icon-circle-arrow-right"></i>
+                </button>
+
+                <textarea id="context" class="compressed process col-md-6 codemirror-input"
+                placeholder="Enter the new JSON-LD context to compact to here..." rows="10">{}</textarea>
+              </div>
+
+              <div id="frame-div" class="col-md-6">
+                <p>
+                  JSON-LD Frame
+                  <div class="pull-right editor-options">
+                    <div class="input-prepend editor-option" title="Use remote frame" data-editor="frame">
+                      <button class="btn" type="button" data-toggle="button">
+                        <span class="icon-stack">
+                          <i class="icon-cloud icon-stack-base icon-muted"></i>
+                          <i class="icon-crop"></i>
+                        </span>
+                      </button>
+                      <input class="col-md-2" type="text" placeholder="Frame URL" />
+                    </div>
+                  </div>
+                </p>
+                <textarea id="frame" class="compressed process col-md-6 codemirror-input"
+                placeholder="Enter your JSON-LD frame here..." rows="10">{}</textarea>
+              </div>
+
+              <div id="privatekey-rsa-div" class="col-md-6">
+                <p>
+                  PEM-encoded Private Key
+                  <div class="pull-right editor-options">
+                    <div class="input-prepend editor-option" title="Use remote private key" data-editor="privatekey-rsa">
+                      <button class="btn" type="button" data-toggle="button">
+                        <span class="icon-stack">
+                          <i class="icon-cloud icon-stack-base icon-muted"></i>
+                          <i class="icon-crop"></i>
+                        </span>
+                      </button>
+                      <input class="col-md-2" type="text" placeholder="Private Key URL" />
+                    </div>
+                  </div>
+                </p>
+                <textarea id="privatekey-rsa" class="compressed process col-md-6 codemirror-input"
+                placeholder="Enter your PEM-encoded private key here..." rows="10">
+  -----BEGIN RSA PRIVATE KEY-----
+  MIICWwIBAAKBgQC4R1AmYYyE47FMZgo708NhFU+t+VWn133PYGt/WYmD5BnKj679
+  YiUmyrC3hX6oZfo4eVpOkycxZvGgXCLQGuDp45XfZkdsjqs3o62En4YjlHWxgeGm
+  kiRqGfZ3sJ3u5WZ2xwapdZY3/2T/oOV5ri8SktTvmVGCyhwFuJC/NbJMEwIDAQAB
+  AoGAZXNdPMQXiFGSGm1S1P0QYzJIW48ZCP4p1TFP/RxeCK5bRJk1zWlq6qBMCb0E
+  rdD2oICupvN8cEYsYAxZXhhuGWZ60vggbqTTa+4LXB+SGCbKMX711ZoQHdY7rnaF
+  b/Udf4wTLD1yAslx1TrHkV56OfuJcEdWC7JWqyNXQoxedwECQQDZvcEmBT/Sol/S
+  AT5ZSsgXm6xCrEl4K26Vyw3M5UShRSlgk12gfqqSpdeP5Z7jdV/t5+vD89OJVfaa
+  Tw4h9BibAkEA2Khe03oYQzqP1V4YyV3QeC4yl5fCBr8HRyOMC4qHHKQqBp2VDUyu
+  RBJhTqqf1ErzUBkXseawNxtyuPmPrMSl6QJAQOgfu4W1EMT2a1OTkmqIWwE8yGMz
+  Q28u99gftQRjAO/s9az4K++WSUDGkU6RnpxOjEymKzNzy2ykpjsKq3RoIQJAA+XL
+  huxsYVE9Yy5FLeI1LORP3rBJOkvXeq0mCNMeKSK+6s2M7+dQP0NBYuPo6i3LAMbi
+  yT2IMAWbY76Bmi8TeQJAfdLJGwiDNIhTVYHxvDz79ANzgRAd1kPKPddJZ/w7Gfhm
+  8Mezti8HCizDxPb+H8HlJMSkfoHx1veWkdLaPWRFrA==
+  -----END RSA PRIVATE KEY-----
+                </textarea>
+              </div>
+
+              <div id="privatekey-koblitz-div" class="col-md-6">
+                <p>Bitcoin (ECDSA Koblitz) Private Key for Signing</p>
+                <textarea id="privatekey-koblitz" class="compressed process col-md-6 codemirror-input"
+                  placeholder="Enter your Bitcoin (Koblitz) private key here..." rows="3">L4mEi7eEdTNNFQEWaa7JhUKAbtHdVvByGAqvpJKC53mfiqunjBjw</textarea>
+
+                <p>Bitcoin (ECDSA Koblitz) Public Key for Verification</p>
+                <textarea id="publickey-koblitz" class="compressed process col-md-6 codemirror-input"
+                  placeholder="Enter your Bitcoin (Koblitz) public key here..." rows="3">1LGpGhGK8whX23ZNdxrgtjKrek9rP4xWER</textarea>
+
+                <div class="koblitz-verification"></div>
+              </div>
+
+
+            </div>
+          </div>
+
+          <div id="markup-errors" class="hide alert alert-error"></div>
+          <div id="param-errors" class="hide alert alert-error"></div>
+          <div id="validation-errors" class="hide alert alert-error"></div>
+          <div id="validation-message" class="hide alert alert-success"></div>
+          <div id="using-context-map" class="hide alert alert-note">
+            <p>NOTE: A remote context that is not known to be fully working yet was detected in your input.
+              If you wish, you can use an alternative context created by the JSON-LD community to
+              process your document nevertheless.</p>
+            <label class="checkbox">
+              <input type="checkbox" id="use-context-map" value="1"> Use development context
+            </label>
+            <table class="table table-condensed">
+              <thead>
+                <tr>
+                  <td>Original</td>
+                  <td>Development</td>
+                </tr>
+              </thead>
+              <tbody>
+                <!-- dynamic rows -->
+              </tbody>
+            </table>
+          </div>
+          <div id="processing-errors" class="hide alert alert-error"></div>
+
+          <div id="output-container">
+            <ul id="tabs" class="nav nav-tabs">
+              <li>
+                <a id="tab-normalized" href="#pane-normalized" data-toggle="tab" name="tab-normalized">
+                  <i class="icon-archive"></i>
+                  <span>Normalized</span>
+                </a>
+              </li>
+              <li>
+                <a id="tab-visualized" href="#pane-visualized" data-toggle="tab" name="tab-visualized">
+                  <i class="icon-eye-open"></i>
+                  <span>Visualized</span>
+                </a>
+              </li>
+              <li>
+                <a id="tab-signed-rsa" href="#pane-signed-rsa" data-toggle="tab" name="tab-signed-rsa">
+                  <i class="icon-pencil"></i>
+                  <span>Signed with RSA</span>
+                </a>
+              </li>
+              <li>
+                <a id="tab-signed-koblitz" href="#pane-signed-koblitz" data-toggle="tab" name="tab-signed-koblitz">
+                  <i class="icon-pencil"></i>
+                  <span>Signed with Bitcoin</span>
+                </a>
+              </li>
+            </ul>
+
+            <div class="tab-content">
+              <div id="pane-normalized" class="tab-pane">
+                <textarea id="normalized" class="codemirror-output"></textarea>
+              </div>
+              <div id="pane-visualized" class="tab-pane">
+                <div id="visualized" style="background: white"></div>
+              </div>
+              <div id="pane-signed-rsa" class="tab-pane">
+                <textarea id="signed-rsa" class="codemirror-output"></textarea>
+              </div>
+              <div id="pane-signed-koblitz" class="tab-pane">
+                <textarea id="signed-koblitz" class="codemirror-output"></textarea>
+              </div>
+            </div><!-- /.tab-content -->
+          </div>
+
+          <hr/>
+		</div>
+	</section>

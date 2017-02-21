@@ -753,7 +753,7 @@
     if(['tab-compacted', 'tab-flattened', 'tab-framed',
       'tab-signed-rsa', 'tab-signed-koblitz', ].indexOf(id) > -1) {
       // these options require more UI inputs, so compress UI space
-      $('#markup-div').removeClass('span12').addClass('span6');
+      $('#markup-div').removeClass('col-md-12').addClass('col-md-6');
       $('#frame-div, #privatekey-rsa-div, #privatekey-koblitz-div, ' +
         '#context-div').hide();
       if(id === 'tab-compacted' || id === 'tab-flattened') {
@@ -774,7 +774,7 @@
       // else no input textarea required
       $('#context-div, #frame-div, #privatekey-rsa-div, ' +
         '#privatekey-koblitz-div').hide();
-      $('#markup-div').removeClass('span6').addClass('span12');
+      $('#markup-div').removeClass('col-md-6').addClass('col-md-12');
       $('#param-type').html('');
     }
 
