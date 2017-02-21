@@ -20,7 +20,7 @@ contact: static
 
 # If you use disqus you need disqus shortname
 # https://help.disqus.com/customer/portal/articles/466208
-disqus_shortname: 
+disqus_shortname:
 
 # Color settings (hex-codes without the leading hash-tag)
 color:
@@ -38,24 +38,16 @@ footer:
 
 # Social networks usernames (many more available: google-plus, flickr, dribbble, pinterest, instagram, tumblr, linkedin, etc.)
 social:
-  - title: 
-    url: 
-  - title: 
-    url:
-  - title: 
-    url: 
-  - title: 
-    url: 
   - title: github
     url: https://github.com/w3c-vc
 
 # Postal address (add as many lines as necessary)
 address:
-  - line: 3481 Melrose Place
-  - line: Beverly Hills, CA 90210
+  - line: Verifiable Claims
+  - line: W3C
 
 # Credits content
-credits: 'credits...'
+credits: 'Verifiable Claims'
 
 # Build settings
 markdown: kramdown

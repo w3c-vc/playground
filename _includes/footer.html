@@ -1,29 +1,34 @@
     <!-- Footer -->
-    <footer class="text-center">
+    <footer class="text-center" id="community">
         <div class="footer-above">
             <div class="container">
                 <div class="row">
                     <div class="footer-col col-md-4">
-                        <h3>{{ site.footer.location }}</h3>
-                        <p>
-                            {% for adress in site.address %}
-                                {{ adress.line }} <br>
-		                    {% endfor %}
-                        </p>
-                    </div>
-                    <div class="footer-col col-md-4">
-                        <h3>{{ site.footer.social }}</h3>
+                        <h3>Community</h3>
+                        <p>Mailing List</p>
                         <ul class="list-inline">
-                            {% for network in site.social %}
                             <li>
-                                <a href="{{ network.url }}" class="btn-social btn-outline"><i class="fa fa-fw fa-{{ network.title }}"></i></a>
+                                <a href="https://www.w3.org/community/credentials/" class="btn-social btn-outline"><i class="fa fa-fw fa-group"></i></a>
                             </li>
-		                    {% endfor %}
                         </ul>
                     </div>
                     <div class="footer-col col-md-4">
-                        <h3>{{ site.footer.credits }}</h3>
-                        <p>{{ site.credits }}</p>
+                        <h3>Source Code</h3>
+                        <p>Github</p>
+                        <ul class="list-inline">
+                            <li>
+                                <a href="https://www.w3.org/community/credentials/" class="btn-social btn-outline"><i class="fa fa-fw fa-group"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer-col col-md-4">
+                        <h3>Meetings</h3>
+                        <p>Every Tuesday, 11am ET</p>
+                        <ul class="list-inline">
+                            <li>
+                                <a href="http://w3c.github.io/vctf/#telecons" class="btn-social btn-outline"><i class="fa fa-fw fa-phone"></i></a>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
