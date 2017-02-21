@@ -3,7 +3,7 @@ title: The Verifiable Claims Playground
 description: |
   crafted by the
   [the W3C Credentials Community Group](https://www.w3.org/community/credentials/)
-owner: Credentials Communit Group # or company name
+owner: Credentials Community Group # or company name
 first_published: 2017 # if migrating another site, the year of your first publish
 email: public-credentials@w3.org
 baseurl: "" # the subpath of your site, e.g. /blog
